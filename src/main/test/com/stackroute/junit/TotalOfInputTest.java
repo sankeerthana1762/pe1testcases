@@ -43,5 +43,17 @@ public class TotalOfInputTest {
 
 
     }
+    @Test
+    public void givenNumberShouldReturnNull()
+    {
+        //Act
+
+        int result = obj.calculateInputSum(new int[]{1,2,3,4,6});
+        //Assert
+        assertEquals("", 16, result);
+
+
+    }
+
 
 }

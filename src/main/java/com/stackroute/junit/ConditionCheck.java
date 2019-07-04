@@ -1,10 +1,11 @@
 package com.stackroute.junit;
-
+//checking the condition for an integer number
 
 public class ConditionCheck{
 
    public String even(int n){
-        String result;
+
+       String result;
         if(n%2==0){
             if(n>20&&n<30)
             {

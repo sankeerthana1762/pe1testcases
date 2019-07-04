@@ -57,6 +57,12 @@ public class PalindromeTest {
         String result = palindromeobj.palindromenumber(5755734);
         assertEquals("", "not palindrome", result);
     }
+    @Test
+    public void givenNumberShouldReturnErrorMessage() {
+//        arrange
 
+        String result = palindromeobj.palindromenumber(-345);
+        assertEquals("", "invalid input", result);
+    }
 
 }

@@ -1,6 +1,7 @@
 package com.stackroute.junit;
 
 import java.util.Scanner;
+//printing the loop based on the condition
 
 public class PrintLoop {
     String series="";

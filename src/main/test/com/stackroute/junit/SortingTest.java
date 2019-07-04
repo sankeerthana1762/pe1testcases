@@ -61,13 +61,14 @@ public class SortingTest {
         assertEquals("", "true", result);
 
     }
+    @Test
     public void givenNumberShouldreturnErrorMessage()
     {
         //Act
         Sorting sortobj = new Sorting();
         String result = sortobj.sortingDesc(0);
         //Assert
-        assertEquals("", "entered number is zero.Cant calculate sum", result);
+        assertEquals("", "false", result);
 
     }
 

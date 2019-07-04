@@ -1,6 +1,9 @@
 package com.stackroute.junit;
 
+//adding the unspecified number of integer arguments
 public class TotalOfInput {
+
+
 
         public int calculateInputSum(int array[]) {
             int sum = 0;

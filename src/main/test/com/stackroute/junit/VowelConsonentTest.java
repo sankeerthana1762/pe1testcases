@@ -72,6 +72,14 @@ public class VowelConsonentTest {
         //Assert
         assertEquals("", "consonant", result);
     }
+    @Test
+    public void givenLetterShouldReturnNull() {
+        //Act
+
+        String result = obj.checkVowelorConsonant(null);
+        //Assert
+        assertEquals("null not valid", null, result);
+    }
 
 
 

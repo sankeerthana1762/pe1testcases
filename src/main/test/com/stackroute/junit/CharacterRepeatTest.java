@@ -1,5 +1,5 @@
 
-package com.stackroute.junitdemo;
+package com.stackroute.junit;
 
         import com.stackroute.junit.CharacterRepeat;
         import org.junit.After;
@@ -17,52 +17,42 @@ public class CharacterRepeatTest {
         obj = new CharacterRepeat();
     }
 
+
+    @Test
+    public void givenCharacterShouldReturnLastThreeCharacterRepetition() {
+        //Act
+
+        String result = obj.charrepeat("srava",3);
+        //Assert
+        assertEquals("testcase passed", "sravaavaavaava", result);
+
+    }
+    @Test
+    public void givenCharacterShouldReturnLastTwoCharacterRepetition() {
+        //Act
+
+        String result = obj.charrepeat("srava",2);
+        //Assert
+        assertEquals("testcase passed", "sravavava", result);
+
+    }
+    @Test
+    public void givenCharacterShouldReturnNull() {
+        //Act
+
+        String result = obj.charrepeat(null,2);
+        //Assert
+        assertEquals("testcase passed", null, result);
+
+    }
+
     @After
     public void tearDown() {
         System.out.println("After");
         obj = null;
     }
 
-    @Before
-    public void setUpBeforeClass() {
-        System.out.println("BeforeClass");
 
-    }
-
-    @After
-    public void tearDownAfterClass() {
-        System.out.println("AfterClass");
-
-    }
-
-    @Test
-    public void givenCharacterShouldReturnLastThreeCharacterRepetition() {
-        //Act
-
-        String result = obj.charrepeat("bhanu",3);
-        //Assert
-        assertEquals("testcase passed", "bhanuanuanuanu", result);
-
-    }
-
-    public void givenCharacterShouldReturnNull()
-    {
-        //Act
-
-        String result = obj.charrepeat("",4);
-        //Assert
-        assertEquals("Index out of bound exception", "null", result);
-
-    }
-    public void givenCharacterShouldReturnEmptyStringAsNoInputGiven()
-    {
-        //Act
-
-        String result = obj.charrepeat("",0);
-        //Assert
-        assertEquals("No input given", "null", result);
-
-    }
 
 
 }

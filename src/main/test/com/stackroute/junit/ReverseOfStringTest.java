@@ -34,22 +34,7 @@ public class ReverseOfStringTest {
     @AfterClass
     public static void teardown() {
         System.out.println("After");
-//        app=null;
     }
-//    @Test
-//    public void givenStringShouldReturnReverse() {
-////        arrange
-//
-//        String result = reverseobj.reversestring("stack");
-//        assertEquals("", "kcats", result);
-//    }
-//    @Test
-//    public void givenStringShouldReturnReverseOfString() {
-////        arrange
-//
-//        String result = reverseobj.reversestring("route");
-//        assertEquals("", "etuor", result);
-//    }
 @Test
 public void givenStringShouldReturnReverseofAString()
 {
@@ -65,9 +50,9 @@ public void givenStringShouldReturnReverseofAString()
     {
         //Act
         ReverseOfString reverseobj=new ReverseOfString();
-        String result =reverseobj.reverseOfAString("bhanu");
+        String result =reverseobj.reverseOfAString("345");
         //Assert
-        assertEquals("Test failed due to extra space","unahb ",result);
+        assertEquals("Test passed","543",result);
 
 
     }
@@ -76,9 +61,20 @@ public void givenStringShouldReturnReverseofAString()
     {
         //Act
 
-        String result = reverseobj.reverseOfAString("bhanu");
+        String result = reverseobj.reverseOfAString("");
         //Assert
-        assertEquals("Test failed due to improper reverse","unah",result);
+        assertEquals("empty string is not accepted",result);
+
+
+    }
+    @Test
+    public void givenStringContainsNullShouldReturnNullMessage()
+    {
+        //Act
+
+        String result = reverseobj.reverseOfAString(null);
+        //Assert
+        assertEquals("null not accepted",result);
 
 
     }

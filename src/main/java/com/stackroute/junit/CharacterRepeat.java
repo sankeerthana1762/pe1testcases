@@ -2,18 +2,22 @@ package com.stackroute.junit;
 
 import java.util.Scanner;
 
+//repeating the characters from the given position
+
 public class CharacterRepeat {
-     public String charrepeat(String str,int n)
-    {
-        int i;
 
-        String str1=str.substring(str.length()-n);
+    public String charrepeat(String inputString, int repeatnumber) {
+        if (inputString != null) {
+            int i;
 
-        for(i=0;i<n;i++)
-        {
-            str += str1;
+            String repeat = inputString.substring(inputString.length() - repeatnumber);
+
+            for (i = 0; i < repeatnumber; i++) {
+                inputString += repeat;
+            }
+            return inputString;
+
         }
-        return str;
-
+        return null;
     }
 }
